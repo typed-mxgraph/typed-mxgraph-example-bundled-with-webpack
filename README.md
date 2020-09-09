@@ -1,3 +1,9 @@
+@typed-mxgraph test
+
+fork from https://github.com/hungtcs-lab/webpack-typescript-starter
+
+
+
 Webpack Typescript Starter
 ====
 

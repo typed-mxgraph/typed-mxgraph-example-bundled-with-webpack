@@ -10,6 +10,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
+    "@typed-mxgraph/typed-mxgraph": "0.0.3-0",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^3.9.1",
     "@typescript-eslint/parser": "^3.9.1",
@@ -34,6 +35,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "core-js": "^3.6.5"
+    "core-js": "^3.6.5",
+    "mxgraph": "^4.2.0"
   }
 }

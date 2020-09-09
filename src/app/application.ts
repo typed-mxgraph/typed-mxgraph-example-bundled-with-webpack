@@ -1,13 +1,25 @@
-
+import factory from 'mxgraph';
 export class Application {
 
-  public hello(): void {
-    console.log(
-      `%chello %cworld %c!`,
-      'color: red; background: lightblue; padding: 0.5rem; font-size: 14px; font-weight: bold;',
-      'color: lightblue; background: red; padding: 0.5rem; font-size: 14px; font-weight: bold;',
-      'color: white; background: darkgreen; padding: 0.5rem; font-size: 14px; font-weight: bold;',
-    );
+  constructor(container: HTMLElement) {
+    (window as any)['mxBasePath'] = 'assets/mxgraph';
+    const { mxGraph, mxClient } = factory({
+      // not working see https://github.com/jgraph/mxgraph/issues/479
+      mxBasePath: 'assets/mxgraph',
+    });
+
+    if(mxClient.isBrowserSupported()) {
+      console.log('Yes! Yes!');
+    }
+
+    const graph = new mxGraph(container);
+    const model = graph.getModel();
+    model.beginUpdate();
+    try {
+      graph.insertVertex(graph.getDefaultParent(), '', 'TEST', 0, 0, 100, 100);
+    } finally {
+      model.endUpdate();
+    }
   }
 
 }

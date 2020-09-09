@@ -70,6 +70,10 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: './src/assets', to: 'assets' },
       { from: './src/favicon.png', to: 'favicon.png' },
+
+      { from: './node_modules/mxgraph/javascript/src/css', to: 'assets/mxgraph/css' },
+      { from: './node_modules/mxgraph/javascript/src/images', to: 'assets/mxgraph/images' },
+      { from: './node_modules/mxgraph/javascript/src/resources', to: 'assets/mxgraph/resources' },
     ]),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
