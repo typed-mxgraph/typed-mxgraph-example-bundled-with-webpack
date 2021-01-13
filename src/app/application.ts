@@ -1,13 +1,8 @@
-import factory from 'mxgraph';
+import { mxClient, mxGraph } from './mxgraph';
+
 export class Application {
 
   constructor(container: HTMLElement) {
-    (window as any)['mxBasePath'] = 'assets/mxgraph';
-    const { mxGraph, mxClient } = factory({
-      // not working see https://github.com/jgraph/mxgraph/issues/479
-      mxBasePath: 'assets/mxgraph',
-    });
-
     if(mxClient.isBrowserSupported()) {
       console.log('Yes! Yes!');
     }
