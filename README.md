@@ -1,29 +1,33 @@
-@typed-mxgraph test
+# Demo typed-mxgraph with webpack
 
-fork from https://github.com/hungtcs-lab/webpack-typescript-starter
-
-
-
-Webpack Typescript Starter
-====
+Webpack Typescript Starter from https://github.com/hungtcs-lab/webpack-typescript-starter
 
 
-### 使用方式
-1. 克隆项目到本地
+## How to use
+
+1. Clone the project locally
     ```shell
-    git clone https://github.com/hungtcs-lab/webpack-typescript-starter.git your-project-name
+    git clone https://github.com/typed-mxgraph/typed-mxgraph-demo.git
     ```
-2. 切换到项目目录
+2. Switch to the project directory
     ```shell
-    cd your-project-name
+    cd typed-mxgraph-demo
     ```
-3. 删除远程分支，或者切换为自己的仓库远程分支
-    ```shell
-    git remote remove origin
-    ```
-4. 安装npm依赖，接着启动项目
+3. Ensure you use Node 10
+
+    The project doesn't build with Node 12 and 14 at least on Linux.
     ```shell
     npm install
     npm start
     ```
-5. 使用浏览器访问，默认端口为`3100`
+    If you are using `nvm`, run
+    ```shell
+    nvm install 10
+    nvm use 10
+    ```
+4. Install npm dependencies, then start the project
+    ```shell
+    npm install
+    npm start
+    ```
+5. Use a browser to access, the default port is `3100`: http://localhost:3100
